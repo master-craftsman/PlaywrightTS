@@ -51,7 +51,7 @@ export abstract class Component {
   async shouldHaveText(text: string, locatorProps: LocatorProps = {}): Promise<void> {
     await test.step(`${this.typeOfUpper} "${this.componentName}" should have text "${text}"`, async () => {
       const locator = this.getLocator(locatorProps);
-      await expect(locator, { message: this.getErrorMessage(`does not have text "${text}"`) }).toContainText(text);
+      await expect(locator, { message: this.getErrorMessage(`does not have text "${text}"`) }).toHaveText(text);
     });
   }
 

@@ -13,6 +13,6 @@ test('Testing create one order position', async ({ ctraderHomePage }) => {
   await ctraderHomePage.navbar.loginModal.login({ login: 'userForTest@spotware.com', password: 'userForTest@spotware.com' });
   await ctraderHomePage.navbar.orderNavbar.openNewOrderModal();
   await ctraderHomePage.navbar.limitOrderModal.modalIsOpened();
-  await ctraderHomePage.navbar.limitOrderModal.placeOrder();
+  await ctraderHomePage.navbar.limitOrderModal.placeMarketOrder();
   await ctraderHomePage.navbar.orderNavbar.orderListHasOpenedOrder(1);
 });
